@@ -13,7 +13,6 @@ function! NERDTreeRg()
       return
   endif
 
-  execute ':NERDTreeClose'
 
   call fzf#vim#grep(
         \ 'rg --hidden --glob "!.git/*" --column --line-number --no-heading --color=always --smart-case "' . pattern . '" ' . dirnode.path.str(),
